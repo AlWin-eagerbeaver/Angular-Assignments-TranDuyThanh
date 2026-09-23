@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CustomerHttp } from '../customer-http';
 
 
@@ -12,7 +12,7 @@ export class GroupCustomers implements OnInit {
   customerGroups: any;
   errMessage: string = '';
 
-  constructor(private _service: CustomerHttp) {}
+  constructor(private _service: CustomerHttp, private cdr: ChangeDetectorRef) {}
 
   ngOnInit(): void {
     console.log("1. Đã bắt đầu chạy Component Group Customers!"); 
@@ -21,10 +21,12 @@ export class GroupCustomers implements OnInit {
       next: (data: any) => { 
   console.log("2. Đã lấy được dữ liệu JSON:", data);
   this.customerGroups = data; 
+  this.cdr.detectChanges();
       },
       error: (err: any) => { 
         console.error("2. Có lỗi xảy ra trong lúc lấy JSON:", err); 
         this.errMessage = err.message || "Lỗi không xác định"; 
+        this.cdr.detectChanges();
       }
     });
   }
