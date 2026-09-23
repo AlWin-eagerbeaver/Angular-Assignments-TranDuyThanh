@@ -3,12 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { ServiceProductImageEventComponent } from './service-product-image-event/service-product-image-event';
 import { ServiceProductImageEventDetailComponent } from './service-product-image-event-detail/service-product-image-event-detail';
 import { ProductCatalogComponent } from './product-catalog/product-catalog';
-
+import { GroupCustomers } from './group-customers/group-customers';
 const routes: Routes = [
   { path: 'bai-13', component: ServiceProductImageEventComponent },
   { path: 'service-product-image-event/:id', component: ServiceProductImageEventDetailComponent },
   
   { path: 'bai-14', component: ProductCatalogComponent },
+  { path: 'bai-18', component: GroupCustomers },
 
   { path: '', redirectTo: 'bai-13', pathMatch: 'full' }
 ];

@@ -1,0 +1,26 @@
+<p>{{errMessage}}</p>
+<table border="1" style="width: 100%; border-collapse: collapse;">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Age</th>
+      <th>#</th>
+    </tr>
+  </thead>
+  <ng-container *ngFor="let group of customerGroups">
+    <tr style="background-color: #f2f2f2;">
+      <td colspan="5"><b>{{group.CustomerTypeId}} - {{group.CustomterTypeName}}</b></td>
+    </tr>
+    <tr *ngFor="let cus of group.Customers">
+      <td>{{cus.Id}}</td>
+      <td>{{cus.Name}}</td>
+      <td>{{cus.Email}}</td>
+      <td>{{cus.Age}}</td>
+      <td style="text-align: center;">
+        <img [src]="cus.Image" alt="avatar" width="50" height="50">
+      </td>
+    </tr>
+  </ng-container>
+</table>
