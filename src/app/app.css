@@ -1,43 +1,95 @@
-/* Khung chứa thanh menu */
+
 .navbar-container {
-  background-color: #2c3e50;
-  padding: 12px 20px;
   display: flex;
   align-items: center;
-  gap: 12px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  justify-content: space-between; 
+  padding: 16px 28px; 
+  background-color: #ffffff;
+  border-radius: 16px; 
+  border: 1.5px solid #ffccd5; 
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.3); 
+  margin-bottom: 24px;
 }
+
 
 .navbar-title {
-  color: #ecf0f1;
-  font-weight: bold;
-  font-size: 16px;
-  margin-right: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ff4d6d; 
+  letter-spacing: 0.5px;
 }
 
-/* Kiểu cho nút bấm */
-.nav-btn {
-  background-color: #34495e;
-  color: #ffffff;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
-  transition: all 0.3s ease;
+
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
+
+
+.nav-btn {
+  background-color: #ffb3c1; 
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px; 
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(255, 77, 109, 0.2);
+}
+
 
 .nav-btn:hover {
-  background-color: #1abc9c;
+  background-color: #ff758f;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 77, 109, 0.3);
 }
 
-.active-btn {
-  background-color: #27ae60 !important;
-  color: white !important;
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0; 
+  background-color: #ffffff;
+  min-width: 230px;
+  border-radius: 14px;
+  border: 1px solid #ffccd5;
+  box-shadow: 0 10px 25px rgba(255, 182, 193, 0.35);
+  z-index: 1000;
+  overflow: hidden;
+  padding: 6px 0;
+}
+
+.dropdown-item {
+  color: #590d22; 
+  padding: 12px 20px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+
+.dropdown-item:hover {
+  background-color: #fff0f3; 
+  color: #ff4d6d;
+}
+
+
+.dropdown-item.active-item {
+  background-color: #ffccd5;
+  color: #a4133c;
   font-weight: bold;
 }
 
-.content-container {
-  padding: 10px;
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+.arrow {
+  margin-left: 8px;
+  font-size: 12px;
 }

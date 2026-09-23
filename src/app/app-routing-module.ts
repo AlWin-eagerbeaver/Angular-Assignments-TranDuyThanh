@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ServiceProductImageEventComponent } from './service-product-image-event/service-product-image-event';
-import { ServiceProductImageEventDetailComponent } from './service-product-image-event-detail/service-product-image-event-detail';
-import { ProductCatalogComponent } from './product-catalog/product-catalog';
-import { GroupCustomers } from './group-customers/group-customers';
+import { ServiceProductImageEventComponent } from './_ngay1809/service-product-image-event/service-product-image-event';
+import { ServiceProductImageEventDetailComponent } from './_ngay1809/service-product-image-event-detail/service-product-image-event-detail';
+import { ProductCatalogComponent } from './_ngay1809/product-catalog/product-catalog';
+import { GroupCustomers } from './_ngay1809/group-customers/group-customers';
 const routes: Routes = [
   { path: 'bai-13', component: ServiceProductImageEventComponent },
   { path: 'service-product-image-event/:id', component: ServiceProductImageEventDetailComponent },

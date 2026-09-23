@@ -1,24 +1,32 @@
 <div class="navbar-container">
   <span class="navbar-title">DANH SÁCH BÀI TẬP</span>
-  
-  <button 
-    routerLink="/bai-13" 
-    routerLinkActive="active-btn" 
-    class="nav-btn">
-    Bài 13: Product Event
-  </button>
-
-  <button routerLink="/bai-14" routerLinkActive="active-btn" class="nav-btn">
-  Bài 14: Product Catalog
-</button>
 
 
-<button 
-    routerLink="/bai-18" 
-    routerLinkActive="active-btn" 
-    class="nav-btn">
-    Bài 18: Group Customers
-  </button>
+  <div class="dropdown">
+    <button class="nav-btn dropdown-toggle">
+      Bài tập ngày 18/09 <span class="arrow">▾</span>
+    </button>
+    <div class="dropdown-menu">
+      <a 
+        routerLink="/bai-13" 
+        routerLinkActive="active-item" 
+        class="dropdown-item">
+        Bài 13: Product Event
+      </a>
+      <a 
+        routerLink="/bai-14" 
+        routerLinkActive="active-item" 
+        class="dropdown-item">
+        Bài 14: Product Catalog
+      </a>
+      <a 
+        routerLink="/bai-18" 
+        routerLinkActive="active-item" 
+        class="dropdown-item">
+        Bài 18: Group Customers
+      </a>
+    </div>
+  </div>
 </div>
 
 <div class="content-container">

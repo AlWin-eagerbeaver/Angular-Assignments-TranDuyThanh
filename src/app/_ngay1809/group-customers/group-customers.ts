@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { CustomerHttp } from '../customer-http';
+import { CustomerHttp } from '../Service/customer-http';
 
 
 @Component({

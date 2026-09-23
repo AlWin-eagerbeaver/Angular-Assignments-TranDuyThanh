@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProductService } from '../product';
+import { ProductService } from '../Service/product';
 
 @Component({
   selector: 'app-service-product-image-event-detail',

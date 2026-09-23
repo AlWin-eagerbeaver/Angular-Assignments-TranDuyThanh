@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 import { catchError, Observable, retry, throwError, shareReplay } from 'rxjs'; 
-import { ICustomerGroup } from './interfaces/customer';
+import { ICustomerGroup } from '../interfaces/customer';
 
 @Injectable({
   providedIn: 'root'
