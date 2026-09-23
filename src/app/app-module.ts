@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
@@ -20,8 +20,8 @@ import { GroupCustomers } from './group-customers/group-customers';
     ProductCatalogComponent,
     GroupCustomers,
   ],
-  imports: [BrowserModule, AppRoutingModule, RouterModule, HttpClientModule],
-  providers: [ProductService, CatalogService, provideBrowserGlobalErrorListeners()],
+  imports: [BrowserModule, AppRoutingModule, RouterModule],
+  providers: [ProductService, CatalogService, provideBrowserGlobalErrorListeners(),provideHttpClient()],
   bootstrap: [App],
 })
 export class AppModule {}
